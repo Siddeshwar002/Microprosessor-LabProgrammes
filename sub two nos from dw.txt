@@ -1,0 +1,18 @@
+.model small
+.data
+a dw 2345h
+b dw 4521h
+c dw ?
+r dw ?
+
+.code
+mov ax,@data
+mov ds,ax
+mov ax,a
+mov bx,b
+add ax,bx
+mov d,ax
+sud bx,ax
+mov c,bx
+int 21h
+end
